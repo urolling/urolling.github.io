@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+		<title>My Page</title>
+	</head>
+	<body bgcolor="black">
+		<script language="JavaScript">
+		<!--
+			var str='.W.E.L.C.O.M.E';
+			var myColor=new Array('#ff00ff','#ee00ff','#ee00ee','#dd00ee','#dd00dd','#cc00dd','#cc00cc',
+									'#bb00cc','#bb00bb','#aa00bb','#aa00aa','#9900aa','#990099','#880099');
+
+			amount=str.length; 
+			Color='#ffaaff';
+			GlowColor='#ff00ff';
+
+			ypos=0;
+			xpos=0;
+			ybase=15;
+			xbase=-80;
+			step=0.03;
+			currStep=0;
+			TrigSplit=360/amount;
+			MY=0;
+			MX=0;
+			C=0;
+			c=0.05
+
+			for(i=0; i < str.length; i++) {
+				temp = str.substring(i, i+1);
+				document.write('<div name="ieDiv" style="position:absolute;top:0px;left:0px;height:20;wnameth:20;text-align:center;font-size:16px; color:'+
+					myColor[i]+'"><B>'+ temp +'</B></div>');
+			}
+
+			function orbit() {
+				MY=document.body.scrollTop+document.body.clientHeight/2 + document.body.clientHeight/2.8*Math.cos((C)/3)*Math.cos(C/10);
+				MX=document.body.scrollLeft+20+document.body.clientWidth/2.2 + document.body.clientWidth/2.4*Math.sin((C)/5)*Math.sin(C/20);
+				ypos=MY;
+				xpos=MX;
+
+				for (i=0; i < amount; i++) {
+				<!--var d=document.getElementByName("ieDiv").item(i).style;-->
+
+					document.getElementsByName("ieDiv").item(i).style.top = ypos+ybase*Math.sin(currStep+i*TrigSplit*Math.PI/180);
+					document.getElementsByName("ieDiv").item(i).style.left = xpos+xbase*Math.cos(currStep+i*TrigSplit*Math.PI/180);
+				}
+				C+=c;
+				currStep+=step;
+				setTimeout('orbit()',20);
+			}
+			window.onload=orbit;
+
+		//-->
+		</script>
+		<center>
+			<h1 style="color:white;">Welcome to my github page</h1>
+		</center>
+	</body>
+</html>
