@@ -189,7 +189,7 @@ function onMouseDown(event) {
 	//console.log("x,y=" + x + "," + y + " -- " + wpos);
 	for (var i in g_zObjCircles) {
 		if(g_zObjCircles[i].onClick(wpos[0], wpos[1])) {
-			if (g_cCurrentSelected) {
+			if (g_cCurrentSelected && g_cCurrentSelected != g_zObjCircles[i]) {
 				g_cCurrentSelected.selected = false;
 			}
 			g_cCurrentSelected = g_zObjCircles[i];
