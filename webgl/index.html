@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<script type="text/javascript" src="gl-matrix.js"></script>
+	<script type="text/javascript" src="wyutil.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<style type="text/css">
+		.container {
+		    position: relative;
+		}
+		 
+		#text {
+		    position: absolute;
+		    left: 0px;
+		    top: 0px;
+		    z-index: 10;
+		}
+	</style>
+</head>
+<body onload="main()" onmousewheel="onScroll(event);">
+<div class="container">
+	<canvas id="glcanvas" width="1200" height="800">
+		Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+	</canvas>
+	<canvas id="text" width="1200" height="800" onmousedown="onMouseDown(event);"></canvas>
+</div>
+</body>
+</html>
