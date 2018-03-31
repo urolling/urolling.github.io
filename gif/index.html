@@ -50,7 +50,7 @@
 			//$("#btn2").click();
 			$("#render").removeClass("disabled");
 
-			if(getQueryString("p") == "wjz.gif") {
+			if(getQueryString("p") == null || getQueryString("p") == "wjz.gif") {
 				addSubtitle("我就是饿死", 0, 11);
 				addSubtitle("死外边 从这里跳下去", 13, 22);
 				addSubtitle("也不会吃你们一点东西", 24, 34);
