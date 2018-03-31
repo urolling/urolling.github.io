@@ -195,7 +195,7 @@
 		function onLoad() {
 			var url = getQueryString("p");
 			if(!url) url = "wjz.gif";
-			else if(url != "sorry.gif" && url != "wjz.gif") url = "sorry.gif";
+			else if(url != "sorry.gif" && url != "wjz.gif") url = "wjz.gif";
 			$("#pic").attr("src", "img/" + url);
 			gifActor = new SuperGif({ 
 				gif: document.getElementById('pic'), 
