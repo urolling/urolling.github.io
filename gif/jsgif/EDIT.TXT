@@ -1,0 +1,2 @@
+Add "setFrameCallback" function, call after frame drawing finished, with arguments "frame_idx" and "ctx".
+Add "getFrameDelay" function.
