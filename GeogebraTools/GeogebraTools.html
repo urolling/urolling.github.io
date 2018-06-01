@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeoGebra Tools</title>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+	<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+<div id="ggb-element" style="width: 1600px; height: 800px;"></div>
+<textarea id="xml_data"></textarea>
+<button onclick="javascript:ggbApplet.reset();ggbApplet.evalCommand(document.getElementById('xml_data').value);">OK</button>
+<script>
+	var WIDTH = parseInt(document.getElementById("ggb-element").style.width);
+	var HEIGHT = parseInt(document.getElementById("ggb-element").style.height);
+    var ggbApp = new GGBApplet({"appName": "classic", "width": WIDTH, "height": HEIGHT, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true, "language": "Chinese" }, true);
+    window.addEventListener("load", function() { 
+        ggbApp.inject('ggb-element');
+    });
+    console.log("w: " + WIDTH + ", h: " + HEIGHT);
+</script>
+</body>
+</html>
